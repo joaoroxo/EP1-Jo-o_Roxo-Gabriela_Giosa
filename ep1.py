@@ -2,7 +2,7 @@
 #
 # Alunos: 
 # - aluno A: João Nogueira Roxo da Fonseca, johnroxo@hotmail.com
-# - aluno B: Gabriela , sicranoa1@insper.edu.br
+# - aluno B: Gabriela Choichit Giosa, gabichoichit@gmail.com
 
 def carregar_cenarios():
     cenarios = {
@@ -58,10 +58,9 @@ def main():
     game_over = False
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
-
-        # Aluno A: substitua este comentário pelo código para imprimir 
-        # o cenário atual.
-
+        print (cenarios['inicio']['titulo'])
+        print (len('Saguao do perigo')*'-')
+        print (cenarios['inicio']['descricao'])
         opcoes = cenario_atual['opcoes']
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
