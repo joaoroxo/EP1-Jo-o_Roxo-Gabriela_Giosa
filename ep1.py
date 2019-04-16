@@ -68,7 +68,7 @@ def main():
         else:
 
             # Aluno B: substitua este comentário e a linha abaixo pelo código
-            # para pedir a escolha do usuário.
+            # para pedir a escolha do usuário.bn
             escolha = ""
 
             if escolha in opcoes:
