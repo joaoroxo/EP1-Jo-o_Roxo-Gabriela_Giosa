@@ -1,4 +1,4 @@
-# EP 2019-1: Escape Insper
+ # EP 2019-1: Escape Insper
 #
 # Alunos: 
 # - aluno A: João Nogueira Roxo da Fonseca, johnroxo@hotmail.com
@@ -58,18 +58,21 @@ def main():
     game_over = False
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
-        print (cenarios['inicio']['titulo'])
-        print (len('Saguao do perigo')*'-')
-        print (cenarios['inicio']['descricao'])
+        print (cenario_atual['titulo'])
+        print (len(cenario_atual['titulo'])*'-')
+        print (cenario_atual['descricao'])
+
         opcoes = cenario_atual['opcoes']
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
         else:
-
-            # Aluno B: substitua este comentário e a linha abaixo pelo código
-            # para pedir a escolha do usuário.bn
-            escolha = ""
+            print ('suas opcoes:')
+            for x,y in opcoes.items():
+                print("{0}: {1}" .format (x,y))
+                
+            
+            escolha = input('Sua escolha?')
 
             if escolha in opcoes:
                 nome_cenario_atual = escolha
