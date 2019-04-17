@@ -3,7 +3,7 @@
 # Alunos: 
 # - aluno A: João Nogueira Roxo da Fonseca, johnroxo@hotmail.com
 # - aluno B: Gabriela Choichit Giosa, gabichoichit@gmail.com
-
+#essa linha eh apenas um teste
 def carregar_cenarios():
     cenarios = {
         "inicio": {
