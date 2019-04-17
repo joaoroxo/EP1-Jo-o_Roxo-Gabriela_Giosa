@@ -5,8 +5,8 @@
 # - aluno B: Gabriela Choichit Giosa, gabichoichit@gmail.com
 #essa linha eh apenas um teste
 def carregar_cenarios():
-    cenarios = {
-        "inicio": {
+    cenarios =  {
+        "saguao insper": {
             "titulo": "Saguao do perigo",
             "descricao": "Voce esta no saguao de entrada do insper",
             "opcoes": {
@@ -14,11 +14,57 @@ def carregar_cenarios():
                 "biblioteca": "Ir para a biblioteca"
             }
         },
+        "carona": {
+            "titulo": "Caroninha do seu Jurandir",
+            "descricao": "A kombi do seu Jurandir te deixou com sucesso na porta do Insper",
+            "opcoes":{
+                "saguao insper": "Entrar no insper.",
+                "predio 2": "Ir para o predio 2 para tentar fazer o EP.",
+            }
+        },
+        "onibus": {
+            "titulo": "Busao para SP",
+            "descricao" : "Voce pegou um onibos para Sp, porem apareceu um monstro no seu Busao.",
+            "opcoes":{
+                "lutar busao" : "tentar lutar contra o monstrengo(voce so tem essa opcao.).",
+            }
+        },
+        "predio 2": {
+            "titulo": "Voce foi para o predio 2.",
+            "descricao" : "Voce nao conseguiu fazer o EP a tempo",
+            "opcoes" : {}
+        },
+                        
+        "charrete": {
+            "titulo": "Simples mais eficiente",
+            "descricao": "O cavalo ficou desidratado e desmaiou.",
+            "opcoes": {
+                "onibus": "Voltar para sua RP e pegar um onibus.",
+                "carona": "Pegar carona com seu Jurandir e sua kombi.",
+            }
+        },
+        "lutar busao": {
+            "titulo": "luta",
+            "descricao": "voce saiu na porrada com o monstro",
+            #luta(if ganha opcoes, perde game over)
+            "opcoes": {
+                "saguao insper" : " Ir para entrada do Insper.",
+            }
+        } ,                              
+        "casa":{
+            "titulo": "Cidade Raiz",
+            "descricao": "Voce esta em Ribeirao Preto (Terra do cafe) em sua casa.",
+            "opcoes":{
+                "onibus": "Pegar um onibus direto para Sao Paulo",
+                "charrete" : "Ir de charrete para Sao Paulo"
+            }
+        },
+            
         "andar professor": {
             "titulo": "Andar do desespero",
             "descricao": "Voce chegou ao andar da sala do seu professor",
             "opcoes": {
-                "inicio": "Tomar o elevador para o saguao de entrada",
+                "saguao insper": "Tomar o elevador para o saguao de entrada",
                 "professor": "Falar com o professor"
             }
         },
@@ -33,11 +79,11 @@ def carregar_cenarios():
             "titulo": "Caverna da tranquilidade",
             "descricao": "Voce esta na biblioteca",
             "opcoes": {
-                "inicio": "Voltar para o saguao de entrada"
+                "saguao insper": "Voltar para o saguao de entrada"
             }
         }
     }
-    nome_cenario_atual = "inicio"
+    nome_cenario_atual = "casa"
     return cenarios, nome_cenario_atual
 
 
@@ -48,9 +94,9 @@ def main():
     print("Parecia uma boa idéia: vou só jogar um pouquinho/assistir Netflix/"
         "embaçar em geral. Amanhã eu começo o EP. Mas isso não deu certo...")
     print()
-    print("É o dia de entregar o EP e você está muuuuito atrasado! Você está "
-        "na entrada do Insper, e quer procurar o professor para pedir um "
-        "adiamento do EP (boa sorte...)")
+    print("Falta 1 dia para entrega do EP! Você está "
+        "na sua casa, e precisa decidir como vai para Sao Paulo. "
+        )
     print()
 
     cenarios, nome_cenario_atual = carregar_cenarios()
@@ -77,7 +123,7 @@ def main():
                 print("Sua indecisão foi sua ruína!")
                 game_over = True
 
-    print("Você morreu!")
+    print("Você perdeu!")
 
 
 # Programa principal.
