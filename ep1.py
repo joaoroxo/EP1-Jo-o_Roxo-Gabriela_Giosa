@@ -128,23 +128,7 @@ def main():
     print("Você perdeu!")
 
 
-=======
-    print("Você morreu!")
-# função feature 1
-x = randint(1,2)
-s = 0
-if x == 1:
-    print("Você encontrou um monstro")
-    y = input("O que quer fazer? lutar ou correr?")
-    if y == ("lutar"):
-         print("Você morreu!")
-    else:
-        print("Você voltou ao saguão principal"
-              "O que quer fazer?")
-else:
-    print("Parabéns!!Você ganhou um prêmio de 100$")
-    s += 100
->>>>>>> cb751615da3840bc33d14991f6d9aa78d5db0c15
+
 # Programa principal.
 if __name__ == "__main__":
     main()
