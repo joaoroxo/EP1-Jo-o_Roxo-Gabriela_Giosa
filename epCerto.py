@@ -46,7 +46,7 @@ def carregar_cenarios():
                 "carona": "Pegar carona com seu Jurandir e sua kombi.",
             }
         },
-        "luta": {
+        "luta busao": {
             "titulo": "luta",
             "descricao": "voce saiu na porrada com o monstro",
             #luta(if ganha opcoes, perde game over)
@@ -97,8 +97,9 @@ def main():
     print("Parecia uma boa idéia: vou só jogar um pouquinho/assistir Netflix/"
         "embaçar em geral. Amanhã eu começo o EP. Mas isso não deu certo...")
     print()
-    print("Falta 1 dia para entrega do EP! Você está "
-        "na sua casa, e precisa decidir como vai para Sao Paulo. "
+    print("Falta 1 dia para entrega do EP!Para sua sorte enquanto estava arrumando suas mala"
+         "encontrou uma gema da vida em um bau antigo  no seu armario. Você está "
+        "na sua casa, e precisa decidir como vai para Sao Paulo (gema da vida ja esta em seu inventario). "
         )
     print()
 
@@ -107,20 +108,36 @@ def main():
     game_over = False
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
-        if cenario_atual == 'luta':
-            
-            
-        
-        print(cenario_atual['titulo'])
-        print(len(cenario_atual['titulo'])*'-')
-        print(cenario_atual['descricao'])
-        opcoes = cenario_atual['opcoes']
-            import random
-            inventario = ["gema da vida"]
 
+        if cenario_atual == 'luta':
+            print(cenario_atual['titulo'])
+            print(len(cenario_atual['titulo'])*'-')
+            print(cenario_atual['descricao'])
+            opcoes = cenario_atual['opcoes']
+
+
+            inventario = ["gema da vida"]
+            
+            
+        monstro = 100
+        jogador =100
+#combate Busao 
+        if nome_cenario_atual == 'luta busao':
+            while jogador > 0 and monstro > 0:
+                while len(inventario)>0:
+                    gemas = input('vc quer utilizar gema(s), sim ou nao?')
+                    if gemas == 'sim':
+                        print ('seu inventario e:')
+                        for gema,i in inventario:
+                            print ('{0}(x{1})'.format(gema,i))
+                        gemausada = input('qual(s) gema deseja usar?')
+                        del inventario[gemausada]
+                    elif  gemas == 'nao':
+                        print()
+                        break
+            break
             print("Você encontrou um monstro, Agora terá que lutar pela sua vida!")
-            jogador = 100
-            monstro = 100
+       
 
             print("A luta começou")
             while jogador > 0 and monstro > 0:
@@ -166,6 +183,8 @@ def main():
                         print("Parabens!! Voce ganhou a gema de EP concluida, ela torna a sua EP feita e perfeita!Va até o professor e faça a entrega")
                         print("Este é o seu inventario após a batalha:")
                         print(inventario)
+
+
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
@@ -180,6 +199,9 @@ def main():
             else:
                 print("Sua indecisão foi sua ruína!")
                 game_over = True
+                
+    
+        
            
 
     print("Você perdeu!")
