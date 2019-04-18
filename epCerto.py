@@ -109,11 +109,63 @@ def main():
         cenario_atual = cenarios[nome_cenario_atual]
         if cenario_atual == 'luta':
             
+            
         
         print(cenario_atual['titulo'])
         print(len(cenario_atual['titulo'])*'-')
         print(cenario_atual['descricao'])
         opcoes = cenario_atual['opcoes']
+            import random
+            inventario = ["gema da vida"]
+
+            print("Você encontrou um monstro, Agora terá que lutar pela sua vida!")
+            jogador = 100
+            monstro = 100
+
+            print("A luta começou")
+            while jogador > 0 and monstro > 0:
+                A = int(input("Escolha um numero de 0 a 10: "))
+                B = random.randint(1,10)
+                if A == B:
+                    ataque_player = 20
+                else:
+                    ataque_player = random.randint(15,19)
+                    x = random.randint(1,3)
+                    if x <= 2:
+                        monstro -= ataque_player
+                        print("O ataque que você deu foi efetivo:")
+                        print(ataque_player)
+                        print("a vida do monstro agora é igual a:")
+                        print(monstro)
+                    else:
+                        jogador -= 10
+                        print("O monstro te atingiu, sua vida agora é igual a:")
+                        print(jogador)
+        
+            if jogador <=0:
+                print("Você morreu!")
+            else:
+                print("Voce ganhou, parabens!!Sua vida agora é igual a:")
+                print(jogador)
+                print("Após a luta mais acirrada da sua vida, você derrotou o monstro, parabens!!")
+                y = random.randint(1,100)
+                if y <= 25:
+                    if "gema de teleporte" not in inventario:
+                        inventario.append("gema de teleporte")
+                elif y > 25  and y <= 50:
+                    if "gema de vida" not in inventario:
+                        inventario.append("gema de vida")
+                elif y < 50 and y > 75:
+                    if "gema de ataque" not in inventario:
+                        inventario.append("gema de ataque")
+                elif y > 75 and y <= 99:
+                    print("Porem não ganhou nada, siga a sua jornada!")
+                else:
+                    if "gema de EP feita" not in inventario:
+                        inventario.append("gema de EP feita")
+                        print("Parabens!! Voce ganhou a gema de EP concluida, ela torna a sua EP feita e perfeita!Va até o professor e faça a entrega")
+                        print("Este é o seu inventario após a batalha:")
+                        print(inventario)
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
