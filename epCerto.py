@@ -5,6 +5,8 @@
 # - aluno B: Gabriela Choichit Giosa, gabichoichit@gmail.com
 #essa linha eh apenas um teste
 import random 
+
+
 def carregar_cenarios():
     cenarios =  {
         "saguao insper": {
@@ -44,7 +46,7 @@ def carregar_cenarios():
                 "carona": "Pegar carona com seu Jurandir e sua kombi.",
             }
         },
-        "lutar busao": {
+        "luta": {
             "titulo": "luta",
             "descricao": "voce saiu na porrada com o monstro",
             #luta(if ganha opcoes, perde game over)
@@ -105,6 +107,9 @@ def main():
     game_over = False
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
+        if cenario_atual == 'luta':
+            
+        
         print(cenario_atual['titulo'])
         print(len(cenario_atual['titulo'])*'-')
         print(cenario_atual['descricao'])
@@ -123,7 +128,7 @@ def main():
             else:
                 print("Sua indecisão foi sua ruína!")
                 game_over = True
-
+           
 
     print("Você perdeu!")
 
@@ -135,25 +140,5 @@ if __name__ == "__main__":
     
 
 
-#
-#print("Você encontrou um monstro, Agora terá que lutar pela sua vida!")
-#
-#playerslife = 100
-#monstro = 100
-#
-#while playerslife >0 and monstro >0:
-#    x = random.randint(1,2)
-#    if x == 1: 
-#        print("Ataque efetivo, menos 20 pontos para o monstro")
-#        monstro -= 20
-#    else:
-#        print("Lesou e o monstro te deu um soco, perdeu 20 pontos de vida")
-#        playerslife -= 20
-#        
-#if playerslife < 0:
-#    print("você morreu!")
-#
-#
-#else:
-#    print("voce ganhou! O resto do trajeto ate o Insper foi tranquilo!") 
- 
+
+
