@@ -4,7 +4,7 @@
 # - aluno A: João Nogueira Roxo da Fonseca, johnroxo@hotmail.com
 # - aluno B: Gabriela Choichit Giosa, gabichoichit@gmail.com
 #essa linha eh apenas um teste
-import random aoba
+import random 
 def carregar_cenarios():
     cenarios =  {
         "saguao insper": {
