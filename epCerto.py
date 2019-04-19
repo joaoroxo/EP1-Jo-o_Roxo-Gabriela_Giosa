@@ -46,7 +46,7 @@ def carregar_cenarios():
                 "carona": "Pegar carona com seu Jurandir e sua kombi.",
             }
         },
-        "luta busao": {
+        "lutar busao": {
             "titulo": "luta",
             "descricao": "voce saiu na porrada com o monstro",
             #luta(if ganha opcoes, perde game over)
@@ -109,31 +109,34 @@ def main():
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
 
+        opcoes = cenario_atual['opcoes']
+        
+        inventario = ["gema da vida"]
+            
         if cenario_atual == 'luta':
             print(cenario_atual['titulo'])
             print(len(cenario_atual['titulo'])*'-')
             print(cenario_atual['descricao'])
-            opcoes = cenario_atual['opcoes']
+            #opcoes = cenario_atual['opcoes']
 
 
-            inventario = ["gema da vida"]
-            
+        
             
         monstro = 100
         jogador =100
 #combate Busao 
-        if nome_cenario_atual == 'luta busao':
+        if nome_cenario_atual == 'lutar busao':
             while jogador > 0 and monstro > 0:
                 while len(inventario)>0:
                     gemas = input('vc quer utilizar gema(s), sim ou nao?')
                     if gemas == 'sim':
                         print ('seu inventario e:')
-                        for gema,i in inventario:
-                            print ('{0}(x{1})'.format(gema,i))
+                        for gema in inventario:
+                            print (gema)
                         gemausada = input('qual(s) gema deseja usar?')
                         del inventario[gemausada]
                     elif  gemas == 'nao':
-                        print()
+                        print('fugiu')
                         break
             break
             print("Você encontrou um monstro, Agora terá que lutar pela sua vida!")
@@ -184,7 +187,7 @@ def main():
                         print("Este é o seu inventario após a batalha:")
                         print(inventario)
 
-
+        
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
@@ -205,7 +208,6 @@ def main():
            
 
     print("Você perdeu!")
-
 
 
 # Programa principal.
