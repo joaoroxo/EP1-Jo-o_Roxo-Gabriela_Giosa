@@ -122,9 +122,9 @@ def main():
 
         
             
-        monstro = 100
+        monstro = 100        gemaDaVida = 50
+
         jogador = 100
-        gemaDaVida = 50
         if gemaDaVida in inventario:
             jogador = 150 
 #combate Busao 
