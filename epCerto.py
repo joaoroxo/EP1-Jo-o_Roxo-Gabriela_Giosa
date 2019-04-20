@@ -46,7 +46,7 @@ def carregar_cenarios():
                 "carona": "Pegar carona com seu Jurandir e sua kombi.",
             }
         },
-        "luta busao": {
+        "lutar busao": {
             "titulo": "luta",
             "descricao": "voce saiu na porrada com o monstro",
             #luta(if ganha opcoes, perde game over)
@@ -108,11 +108,93 @@ def main():
     game_over = False
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
+
         print(cenario_atual['titulo'])
         print(len(cenario_atual['titulo'])*'-')
         print(cenario_atual['descricao'])
         opcoes = cenario_atual['opcoes']
         
+
+        opcoes = cenario_atual['opcoes']
+        
+        inventario = ["gema da vida"]
+            
+        if cenario_atual == 'luta':
+            print(cenario_atual['titulo'])
+            print(len(cenario_atual['titulo'])*'-')
+            print(cenario_atual['descricao'])
+            #opcoes = cenario_atual['opcoes']
+
+
+        
+            
+        monstro = 100
+        jogador =100
+#combate Busao 
+        if nome_cenario_atual == 'lutar busao':
+            while jogador > 0 and monstro > 0:
+                while len(inventario)>0:
+                    gemas = input('vc quer utilizar gema(s), sim ou nao?')
+                    if gemas == 'sim':
+                        print ('seu inventario e:')
+                        for gema in inventario:
+                            print (gema)
+                        gemausada = input('qual(s) gema deseja usar?')
+                        del inventario[gemausada]
+                    elif  gemas == 'nao':
+                        print('fugiu')
+                        break
+            break
+            print("Você encontrou um monstro, Agora terá que lutar pela sua vida!")
+       
+
+            print("A luta começou")
+            while jogador > 0 and monstro > 0:
+                A = int(input("Escolha um numero de 0 a 10: "))
+                B = random.randint(1,10)
+                if A == B:
+                    ataque_player = 20
+                else:
+                    ataque_player = random.randint(15,19)
+                    x = random.randint(1,3)
+                    if x <= 2:
+                        monstro -= ataque_player
+                        print("O ataque que você deu foi efetivo:")
+                        print(ataque_player)
+                        print("a vida do monstro agora é igual a:")
+                        print(monstro)
+                    else:
+                        jogador -= 10
+                        print("O monstro te atingiu, sua vida agora é igual a:")
+                        print(jogador)
+        
+            if jogador <=0:
+                print("Você morreu!")
+            else:
+                print("Voce ganhou, parabens!!Sua vida agora é igual a:")
+                print(jogador)
+                print("Após a luta mais acirrada da sua vida, você derrotou o monstro, parabens!!")
+                y = random.randint(1,100)
+                if y <= 25:
+                    if "gema de teleporte" not in inventario:
+                        inventario.append("gema de teleporte")
+                elif y > 25  and y <= 50:
+                    if "gema de vida" not in inventario:
+                        inventario.append("gema de vida")
+                elif y < 50 and y > 75:
+                    if "gema de ataque" not in inventario:
+                        inventario.append("gema de ataque")
+                elif y > 75 and y <= 99:
+                    print("Porem não ganhou nada, siga a sua jornada!")
+                else:
+                    if "gema de EP feita" not in inventario:
+                        inventario.append("gema de EP feita")
+                        print("Parabens!! Voce ganhou a gema de EP concluida, ela torna a sua EP feita e perfeita!Va até o professor e faça a entrega")
+                        print("Este é o seu inventario após a batalha:")
+                        print(inventario)
+
+        
+
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
@@ -132,7 +214,6 @@ def main():
            
 
     print("Você perdeu!")
-
 
 
 # Programa principal.
