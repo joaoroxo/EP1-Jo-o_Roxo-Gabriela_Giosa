@@ -119,6 +119,7 @@ def main():
 
         
             
+
         monstro = 100       
         gemaDaVida = 100
         gemaDeAtaque = 20
@@ -131,10 +132,13 @@ def main():
              break
 #combate Busao
         if nome_cenario_atual == 'lutar':
-        
-           print("E sua primeira batalha, mostre o porque merece adiamento do EP!")
-           print("Voce tem ", jogador, " de vida")
+            print("E sua primeira batalha, mostre o porque merece adiamento do EP!")
+#combate Busao 
+        if nome_cenario_atual == 'lutar busao':
 
+                
+           print("Você encontrou um monstro, Agora terá que lutar pela sua vida!")
+           print("Voce tem ", jogador, " de vida")
            print("A luta começou")
            while jogador > 0 and monstro > 0:
                A = int(input("Escolha um numero de 0 a 10: "))
@@ -185,6 +189,7 @@ def main():
                         
                         
       
+
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
