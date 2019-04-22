@@ -137,18 +137,13 @@ def main():
     cenarios, nome_cenario_atual = carregar_cenarios()
     gema_EP = False
     game_over = False
+    inventario = ["gemaDaVida"]
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]       
-        inventario = ["gemaDaVida"]
         print(cenario_atual['titulo'])
         print(len(cenario_atual['titulo'])*'-')
         print(cenario_atual['descricao'])
         opcoes = cenario_atual['opcoes']
-        
-
-        
-            
-
         monstro = 100       
         gemaDaVida = 100
         jogador = 100
@@ -163,26 +158,19 @@ def main():
             print("E sua primeira batalha, mostre o porque merece adiamento do EP!")
             print("Voce tem ", jogador, " de vida")
             while jogador > 0 and monstro > 0:
-                A = int(input("Escolha um numero de 0 a 10: "))
-                B = random.randint(1,10)
-                if A == B:
-                    ataque_player = 20
+                B = random.randint(1,3)
+                ataque_player = 20
+                if B <= 2:
+                    monstro -= ataque_player
+                    print("O ataque que você deu foi efetivo, a vida do monstro agora é igual a: ")
+                    print(monstro)
                 else:
-                    ataque_player = random.randint(15,19)
-                    x = random.randint(1,3)
-                    if x <= 2:
-                        monstro -= ataque_player
-                        print("O ataque que você deu foi efetivo:")
-                        print(ataque_player)
-                        print("a vida do monstro agora é igual a:")
-                        print(monstro)
-                    else:
-                        jogador -= 10
-                        print("O monstro te atingiu, sua vida agora é igual a:")
-                        print(jogador)
-                        vida_jogador = jogador
+                    jogador -= 10
+                    print("O monstro te atingiu, sua vida agora é igual a:")
+                    print(jogador)
+                 
             if jogador <=0:
-               print("Você morreu!")
+                print("Você morreu!")
             else:
                 print("Voce ganhou, parabens!!Sua vida agora é igual a:")
                 print(jogador)
@@ -211,30 +199,24 @@ def main():
         if 'gemaDeAtaque' in inventario:
              ataque_player += gemaDeAtaque
         if nome_cenario_atual == 'Lutar':
-             print("Voce tem ", vida_jogador, " de vida")
-             while vida_jogador > 0 and monstro > 0:
-               A = int(input("Escolha um numero de 0 a 10: "))
-               B = random.randint(1,10)
-               if A == B:
-                   ataque_player = 20
-               else:
-                   ataque_player = random.randint(15,19)
-                   x = random.randint(1,3)
-                   if x <= 2:
-                       monstro -= ataque_player
-                       print("O ataque que você deu foi efetivo:")
-                       print(ataque_player)
-                       print("a vida do monstro agora é igual a:")
-                       print(monstro)
-                   else:
-                       vida_jogador -= 10
-                       print("O monstro te atingiu, sua vida agora é igual a:")
-                       print(vida_jogador)                      
+             print("Voce tem ", jogador, " de vida")
+             while jogador > 0 and monstro > 0:
+                B = random.randint(1,3)
+                ataque_player = 20
+                if B <= 2:
+                    monstro -= ataque_player
+                    print("O ataque que você deu foi efetivo, a vida do monstro agora é igual a: ")
+                    print(monstro)
+                else:
+                    jogador -= 10
+                    print("O monstro te atingiu, sua vida agora é igual a:")
+                    print(jogador)
+                                                  
              if jogador <=0:
                  print("Você morreu!")
              else:
                  print("Voce ganhou, parabens!!Sua vida agora é igual a:")
-                 print(vida_jogador)
+                 print(jogador)
                  print("Após a luta mais acirrada da sua vida, você derrotou o monstro, parabens!!")          
                  print("Voce percebeu que ele n escondia so uma passagem e sim um teletransporte")
                  print("Agora voce precisa escolher entre 3 salas, podendo ganhar itens bons ou ter uma surpresa inesperada")
@@ -244,16 +226,16 @@ def main():
                      sala_secreta = input('qual sala deseja ir(sala 1,sala 2 ou sala 3)??')
                      if sala_secreta == "sala 1": 
                          print("Que sorte..., voce ganhou um bonus de vida(+50) por entrar nessa sala.")
-                         vida_jogador += 100
-                         print("Agora voce tem" , vida_jogador, "de vida")
+                         jogador += 100
+                         print("Agora voce tem" , jogador, "de vida")
                      elif sala_secreta == "sala 2": 
                          print("Que sorte..., voce ganhou uma gema de ataque(+20) por entrar nessa sala.")
                          if "gemaDeAtaque" not in inventario:
                              inventario.append("gemaDeAtaque")
                      else:
                          print("Que pena.., voce perdeu 30 de vida por entrar nessa sala.")
-                         vida_jogador -= 30
-                         print("Agora voce tem" , vida_jogador, "de vida")
+                         jogador -= 30
+                         print("Agora voce tem" , jogador, "de vida")
                  else:
                      print("infelizmente voce nao possui a gema de teleporte e seu inventario")
         
