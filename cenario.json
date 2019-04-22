@@ -1,0 +1,120 @@
+cenarios =  {
+        "saguao insper": {
+            "titulo": "Saguao do perigo",
+            "descricao": "Voce esta no saguao de entrada do insper",
+            "opcoes": {
+                "andar professor": "Tomar o elevador para o andar do professor",
+                "biblioteca": "Ir para a biblioteca",
+                "4 andar": "dar uma passada no 4 andar"
+            }
+        },
+        "carona": {
+            "titulo": "Caroninha do seu Jurandir",
+            "descricao": "seu Jurandir vai te dar carona com uma condicao, tirar o monstro de dentro da Kombi dele",
+            "opcoes":{
+                "lutar" : "Voce precisa derrotar o montro para chegar em SP"                
+            }
+        },
+        "onibus": {
+            "titulo": "Busao para SP",
+            "descricao" : "Voce pegou um onibos para Sp, porem apareceu um monstro no seu Busao.",
+            "opcoes":{
+                "lutar" : "tentar lutar contra o monstrengo(voce so tem essa opcao.).",
+            }
+        },
+        "predio 2": {
+            "titulo": "Voce foi para o predio 2.",
+            "descricao" : "Voce nao conseguiu fazer o EP a tempo",
+            "opcoes" : {}
+        },
+                        
+        "charrete": {
+            "titulo": "Simples mais eficiente",
+            "descricao": "O cavalo ficou desidratado e desmaiou.",
+            "opcoes": {
+                "onibus": "Voltar para sua RP e pegar um onibus.",
+                "carona": "Pegar carona com seu Jurandir e sua kombi.",
+            }
+        },
+        "lutar": {
+            "titulo": "luta",
+            "descricao": "voce saiu na porrada com o monstro",
+            "opcoes": {
+                "saguao insper" : " Ir para entrada do Insper.",
+                "predio 2": "Tentar fazer o EP com seus amigos"
+            }
+        } ,
+        "4 andar":{
+            "titulo": "4 andar",
+            "descricao":"Voce subiu no quarto andar para ver como estao as coisas por la",
+            "opcoes":{
+                "jogar":"jogar um pouco para descontrair",
+                "Sala 405": "Dar um alhada na sala para ver se tem algo que pode te ajudar com o EP",
+                "andar professor": "ir para o andar do professor",
+                "saguao insper" : "voltar para o saguo do insper",
+            }
+        },
+        "jogar":{
+            "titulo": "Nada como um bom descanso",
+            "decricao":"Voce descansou bastante e obviamente perdeu o tempo do Ep",
+            "opcoes":{}
+        },
+        "Sala 405":{
+            "titulo": "Ambiente medonho",
+            "descricao": "A sala esta apagada, voce procura algo que pode te ajudar com o EP e acha uma estranha passagem secreta, mas nada e tao facil, voce encontra um monstro que protege a passagem",
+            "opcoes":{
+                "Lutar": "Lutar com o monstro para ver o que tem atras dele.",
+                "fugir": "Sair correndo da sala"
+            }
+        } ,
+        "fugir":{
+            "titulo": "fuga",
+            "descricao":"voce fugiu da sala",
+            "opcoes":{
+                "jogar":"jogar um pouco para descontrair",
+                "andar professor": "ir para o andar do professor",
+                "saguao insper" : "voltar para o saguo do insper",}
+            },
+        "Lutar":{
+            "titulo":"luta",
+            "descricao": "Voce manda o monstro vir pra cima",
+            "opcoes":{
+                "andar professor": "ir para o andar do professor",
+                "saguao insper" : "voltar para o saguo do insper",
+            }
+        },                        
+        "casa":{
+            "titulo": "Cidade Raiz",
+            "descricao": "Voce esta em Ribeirao Preto (Terra do cafe) em sua casa.",
+            "opcoes":{
+                "onibus": "Pegar um onibus direto para Sao Paulo",
+                "charrete" : "Ir de charrete para Sao Paulo"
+            }
+        },
+            
+        "andar professor": {
+            "titulo": "Andar do desespero",
+            "descricao": "Voce chegou ao andar da sala do seu professor",
+            "opcoes": {
+                "saguao insper": "Tomar o elevador para o saguao de entrada",
+                "professor": "Falar com o professor"
+            }
+        },
+        "professor": {
+            "titulo": "O monstro do Python",
+            "descricao":  "O monstro do python so poder ser detido de duas maneiras:com a gema do ep feito, ou uma batalha final",                        
+            "opcoes": {
+                
+            }
+        
+        },
+                   
+        
+        "biblioteca": {
+            "titulo": "Caverna da tranquilidade",
+            "descricao": "Voce esta na biblioteca",
+            "opcoes": {
+                "saguao insper": "Voltar para o saguao de entrada"
+            }
+        }
+    }
