@@ -7,8 +7,8 @@
 import random 
 import json
 
-with open ("cenario.json", "r") as arquivo:
-    cenarios = json.load(arquivo)
+with open ('cenario.json', 'r',encoding="utf8") as arquivo:
+    cenario = json.load(arquivo)
 
 
 def main():
@@ -24,7 +24,7 @@ def main():
         "na sua casa, e precisa decidir como vai para Sao Paulo (gema da vida ja esta em seu inventario, que faz voce ter 200 de vida todo começo de luta). "
         )
     print()
-
+    carregar_cenarios = ()
     cenarios, nome_cenario_atual = carregar_cenarios()
     gema_EP = False
     game_over = False
