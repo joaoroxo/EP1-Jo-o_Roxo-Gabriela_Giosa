@@ -6,125 +6,129 @@
 #essa linha eh apenas um teste
 import random 
 
-{
-    "saguao insper": {
-        "titulo": "Saguao do perigo",
-        "descricao": "Voce esta no saguao de entrada do insper",
-        "opcoes": {
-            "andar professor": "Tomar o elevador para o andar do professor",
-            "biblioteca": "Ir para a biblioteca",
-            "4 andar": "dar uma passada no 4 andar"
-        }
-    },
-    "carona": {
-        "titulo": "Caroninha do seu Jurandir",
-        "descricao": "seu Jurandir vai te dar carona com uma condicao, tirar o monstro de dentro da Kombi dele",
-        "opcoes":{
-            "lutar" : "Voce precisa derrotar o montro para chegar em SP"                
-        }
-    },
-    "onibus": {
-        "titulo": "Busao para SP",
-        "descricao" : "Voce pegou um onibos para Sp, porem apareceu um monstro no seu Busao.",
-        "opcoes":{
-            "lutar" : "tentar lutar contra o monstrengo(voce so tem essa opcao.)."
-        }
-    },
-    "predio 2": {
-        "titulo": "Voce foi para o predio 2.",
-        "descricao" : "Voce nao conseguiu fazer o EP a tempo",
-        "opcoes" : {}
-    },
-                   
-    "charrete": {
-        "titulo": "Simples mais eficiente",
-        "descricao": "O cavalo ficou desidratado e desmaiou.",
-        "opcoes": {
-            "onibus": "Voltar para sua RP e pegar um onibus.",
-            "carona": "Pegar carona com seu Jurandir e sua kombi."
-        }
-    },
-    "lutar": {
-        "titulo": "luta",
-        "descricao": "voce saiu na porrada com o monstro",
-        "opcoes": {
-            "saguao insper" : " Ir para entrada do Insper.",
-            "predio 2": "Tentar fazer o EP com seus amigos"
-        }
-    } ,
-    "4 andar":{
-        "titulo": "4 andar",
-        "descricao":"Voce subiu no quarto andar para ver como estao as coisas por la",
-        "opcoes":{
-            "jogar":"jogar um pouco para descontrair",
-            "Sala 405": "Dar um alhada na sala para ver se tem algo que pode te ajudar com o EP",
-            "andar professor": "ir para o andar do professor",
-            "saguao insper" : "voltar para o saguo do insper"
-        }
-    },
- 
-    "jogar":{
-        "titulo": "Nada como um bom descanso",
-        "decricao":"Voce descansou bastante e obviamente perdeu o tempo do Ep",
-        "opcoes":{}
-    },
-    "Sala 405":{
-        "titulo": "Ambiente medonho",
-        "descricao": "A sala esta apagada, voce procura algo que pode te ajudar com o EP e acha uma estranha passagem secreta, mas nada e tao facil, voce encontra um monstro que protege a passagem",
-        "opcoes":{
-            "Lutar": "Lutar com o monstro para ver o que tem atras dele.",
-            "fugir": "Sair correndo da sala"
-        }
-    } ,
-    "fugir":{
-        "titulo": "fuga",
-        "descricao":"voce fugiu da sala",
-        "opcoes":{
-            "jogar":"jogar um pouco para descontrair",
-            "andar professor": "ir para o andar do professor",
-            "saguao insper" : "voltar para o saguo do insper"}
+
+
+def carregar_cenarios():
+    cenarios =  {
+        "saguao insper": {
+            "titulo": "Saguao do perigo",
+            "descricao": "Voce esta no saguao de entrada do insper",
+            "opcoes": {
+                "andar professor": "Tomar o elevador para o andar do professor",
+                "biblioteca": "Ir para a biblioteca",
+                "4 andar": "dar uma passada no 4 andar"
+            }
         },
-    "Lutar":{
-        "titulo":"luta",
-        "descricao": "Voce manda o monstro vir pra cima",
-        "opcoes":{
-            "andar professor": "ir para o andar do professor",
-            "saguao insper" : "voltar para o saguo do insper"
-        }
-    },                        
-    "casa":{
-        "titulo": "Cidade Raiz",
-        "descricao": "Voce esta em Ribeirao Preto (Terra do cafe) em sua casa.",
-        "opcoes":{
-            "onibus": "Pegar um onibus direto para Sao Paulo",
-            "charrete" : "Ir de charrete para Sao Paulo"
-        }
-    },
-       
-    "andar professor": {
-        "titulo": "Andar do desespero",
-        "descricao": "Voce chegou ao andar da sala do seu professor",
-        "opcoes": {
-            "saguao insper": "Tomar o elevador para o saguao de entrada",
-            "professor": "Falar com o professor"
-        }
-    },
-    "professor": {
-        "titulo": "O monstro do Python",
-        "descricao":  "O monstro do python so poder ser detido de duas maneiras:com a gema do ep feito, ou uma batalha final",                        
-        "opcoes": {
-           
-        }
- 
-    },
-    "biblioteca": {
-        "titulo": "Caverna da tranquilidade",
-        "descricao": "Voce esta na biblioteca",
-        "opcoes": {
-            "saguao insper": "Voltar para o saguao de entrada"
+        "carona": {
+            "titulo": "Caroninha do seu Jurandir",
+            "descricao": "seu Jurandir vai te dar carona com uma condicao, tirar o monstro de dentro da Kombi dele",
+            "opcoes":{
+                "lutar" : "Voce precisa derrotar o montro para chegar em SP"                
+            }
+        },
+        "onibus": {
+            "titulo": "Busao para SP",
+            "descricao" : "Voce pegou um onibos para Sp, porem apareceu um monstro no seu Busao.",
+            "opcoes":{
+                "lutar" : "tentar lutar contra o monstrengo(voce so tem essa opcao.).",
+            }
+        },
+        "predio 2": {
+            "titulo": "Voce foi para o predio 2.",
+            "descricao" : "Voce nao conseguiu fazer o EP a tempo",
+            "opcoes" : {}
+        },
+
+        "charrete": {
+            "titulo": "Simples mais eficiente",
+            "descricao": "O cavalo ficou desidratado e desmaiou.",
+            "opcoes": {
+                "onibus": "Voltar para sua RP e pegar um onibus.",
+                "carona": "Pegar carona com seu Jurandir e sua kombi.",
+            }
+        },
+        "lutar": {
+            "titulo": "luta",
+            "descricao": "voce saiu na porrada com o monstro",
+            "opcoes": {
+                "saguao insper" : " Ir para entrada do Insper.",
+                "predio 2": "Tentar fazer o EP com seus amigos"
+            }
+        } ,
+        "4 andar":{
+            "titulo": "4 andar",
+            "descricao":"Voce subiu no quarto andar para ver como estao as coisas por la",
+            "opcoes":{
+                "jogar":"jogar um pouco para descontrair",
+                "Sala 405": "Dar um alhada na sala para ver se tem algo que pode te ajudar com o EP",
+                "andar professor": "ir para o andar do professor",
+                "saguao insper" : "voltar para o saguo do insper",
+            }
+        },
+        "jogar":{
+            "titulo": "Nada como um bom descanso",
+            "decricao":"Voce descansou bastante e obviamente perdeu o tempo do Ep",
+            "opcoes":{}
+        },
+        "Sala 405":{
+            "titulo": "Ambiente medonho",
+            "descricao": "A sala esta apagada, voce procura algo que pode te ajudar com o EP e acha uma estranha passagem secreta, mas nada e tao facil, voce encontra um monstro que protege a passagem",
+            "opcoes":{
+                "Lutar": "Lutar com o monstro para ver o que tem atras dele.",
+                "fugir": "Sair correndo da sala"
+            }
+        } ,
+        "Lutar":{
+            "titulo":"luta",
+            "descricao": "Voce manda o monstro vir pra cima",
+            "opcoes":{
+                "andar professor": "ir para o andar do professor",
+                "saguao insper" : "voltar para o saguo do insper",
+            }
+        },                        
+        "casa":{
+            "titulo": "Cidade Raiz",
+            "descricao": "Voce esta em Ribeirao Preto (Terra do cafe) em sua casa.",
+            "opcoes":{
+                "onibus": "Pegar um onibus direto para Sao Paulo",
+                "charrete" : "Ir de charrete para Sao Paulo"
+            }
+        },
+
+        "andar professor": {
+            "titulo": "Andar do desespero",
+            "descricao": "Voce chegou ao andar da sala do seu professor",
+            "opcoes": {
+                "saguao insper": "Tomar o elevador para o saguao de entrada",
+                "professor": "Falar com o professor"
+            }
+        },
+        "professor": {
+            "titulo": "O monstro do Python",
+            "descricao": "Voce foi pedir para o professor adiar o EP. "
+                         "O professor revelou que é um monstro disfarçado "
+                         "e devorou sua alma.",
+            "opcoes": {}
+        },
+        "fugir":{
+            "titulo":"valeu, falou",
+            "descricao":"voce saiu correndo da sala",
+            "opcoes":{
+                "andar professor": "ir para o andar do professor",
+                "saguao insper" : "voltar para o saguo do insper",
+            }
+        },
+        "biblioteca": {
+            "titulo": "Caverna da tranquilidade",
+            "descricao": "Voce esta na biblioteca",
+            "opcoes": {
+                "saguao insper": "Voltar para o saguao de entrada"
+            }
         }
     }
-}
+    nome_cenario_atual = "casa"
+    return cenarios, nome_cenario_atual
+
 
 
 def main():
@@ -140,7 +144,7 @@ def main():
         "na sua casa, e precisa decidir como vai para Sao Paulo (gema da vida ja esta em seu inventario, que faz voce ter 200 de vida todo começo de luta). "
         )
     print()
-    carregar_cenarios = ()
+
     cenarios, nome_cenario_atual = carregar_cenarios()
     gema_EP = False
     game_over = False
@@ -169,16 +173,17 @@ def main():
                 ataque_player = 20
                 if B <= 2:
                     monstro -= ataque_player
+                   
                 else:
                     jogador -= 10
+                  
 
-                 
+
             if jogador <=0:
                 print("Você morreu!")
             else:
                 print("Voce ganhou, parabens!!Sua vida agora é igual a:")
                 print(jogador)
-                print("Após a luta mais acirrada da sua vida, você derrotou o monstro, parabens!!")
                 print('Apos vencer o montro voce chega tranquilamente em SP')
                 y = random.randint(1,100)
                 if y <= 30:
@@ -210,10 +215,12 @@ def main():
                 ataque_player = 20
                 if B <= 2:
                     monstro -= ataque_player
+               
 
                 else:
                     jogador -= 10
-                                                  
+                   
+
              if jogador <=0:
                  print("Você morreu!")
                  print("A vida do monstro foi de:", monstro)
@@ -228,7 +235,7 @@ def main():
                  if 'gemaDeTeleporte' in inventario:
                      sala_secreta = input('qual sala deseja ir(sala 1,sala 2 ou sala 3)??')
                      if sala_secreta == "sala 1": 
-                         print("Que sorte..., voce ganhou um bonus de vida(+50) por entrar nessa sala.")
+                         print("Que sorte..., voce ganhou um bonus de vida(+50) por entrar nessa sala.")                         
                          jogador += 50
                          print("Agora voce tem" , jogador, "de vida")
                      elif sala_secreta == "sala 2": 
@@ -241,6 +248,7 @@ def main():
                          print("Agora voce tem" , jogador, "de vida")
                  else:
                      print("infelizmente voce nao possui a gema de teleporte e seu inventario")
+        
 # Batalha final
         if nome_cenario_atual == "professor":
             professor = 500
@@ -254,7 +262,7 @@ def main():
                 else:
                     jogador -= 25
 
-                                                  
+
             if jogador <=0:
                  print("A batalha final acabou, e infelizmente você morreu")
                  print("A vida final do professor foi de ", professor, " pontos")
@@ -263,10 +271,10 @@ def main():
                  print(jogador)
                  print("Você derrotou o professor e não precisou entregar a sua EP")
                  break
-                 
-            
-            
-        
+
+
+
+
             
                  
         
@@ -275,7 +283,6 @@ def main():
                         
                         
       
-
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
@@ -284,7 +291,6 @@ def main():
             for x,y in opcoes.items():
                 print ("{0}:{1}".format(x,y))
             escolha = input('qual sua opcao?')
-
             if escolha in opcoes:
                 nome_cenario_atual = escolha
             else:
@@ -294,15 +300,14 @@ def main():
                 
                 
          
+
+
+
     
-        
-           
     if "gema de EP feita" in inventario and professor <= 0:
         print("parabens, voce ganhou gracas a gema da ep feita!!!")
     else:
         print("Você perdeu!")
-
-
 # Programa principal.
 if __name__ == "__main__":
     main()
